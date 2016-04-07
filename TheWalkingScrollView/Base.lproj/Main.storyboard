@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheWalkingScrollView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="YWb-Xw-CSz">
+                                <rect key="frame" x="158" y="15" width="283" height="151"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="151" id="9wK-xA-LZr"/>
+                                    <constraint firstAttribute="width" constant="283" id="xeY-SB-Zv1"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shelf" translatesAutoresizingMaskIntoConstraints="NO" id="fKv-Me-nNR">
+                                <rect key="frame" x="0.0" y="525" width="600" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="68" id="1kp-0G-px7"/>
+                                    <constraint firstAttribute="height" constant="68" id="ZNz-0L-Gdq"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1kp-0G-px7"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJq-jz-02H">
+                                <rect key="frame" x="405" y="585" width="600" height="600"/>
+                                <subviews>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="72X-fN-EmD">
+                                        <rect key="frame" x="155" y="215" width="290" height="385"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lJq-jz-02H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="07a-ws-CHo"/>
+                            <constraint firstItem="fKv-Me-nNR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="D7c-k6-DLw"/>
+                            <constraint firstItem="YWb-Xw-CSz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V3i-9o-Hjb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lJq-jz-02H" secondAttribute="bottom" id="Vaz-QA-dBH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fKv-Me-nNR" secondAttribute="bottom" constant="7" id="Wdc-vv-wnz"/>
+                            <constraint firstAttribute="trailing" secondItem="lJq-jz-02H" secondAttribute="trailing" id="Xct-Lt-pR0"/>
+                            <constraint firstAttribute="trailing" secondItem="fKv-Me-nNR" secondAttribute="trailing" id="dsV-wC-bY6"/>
+                            <constraint firstItem="lJq-jz-02H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gzL-GK-qmU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ScrollView" destination="lJq-jz-02H" id="2dg-60-m00"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243" y="339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="368" height="610"/>
+        <image name="logo" width="732" height="340"/>
+        <image name="shelf" width="865" height="114"/>
+    </resources>
+</document>
